@@ -55,7 +55,7 @@ animations {
     image: "/player/images/p1_stand.png"
     sprite_trim_mode: SPRITE_TRIM_MODE_OFF
   }
-  playback: PLAYBACK_LOOP_FORWARD
+  playback: PLAYBACK_NONE
   fps: 60
   flip_horizontal: 0
   flip_vertical: 0
