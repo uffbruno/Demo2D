@@ -16,4 +16,5 @@ title = Demo2D
 
 [physics]
 allow_dynamic_transforms = 1
+debug = 1
 
