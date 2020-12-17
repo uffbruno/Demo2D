@@ -8,6 +8,8 @@ function init(self)
 	self.max_vertical_accel = 10
 	self.jump_takeoff_speed = 400
 
+	self.last_y = 0
+
 	self.player_states = {}
 
 	self.player_states.walking = "walk"
@@ -31,29 +33,47 @@ function final(self)
 end
 
 local function set_player_state(self, player_state)
-	self.current_state = player_state
-	self.animation_running = false
+	if self.current_state ~= player_state then
+		self.current_state = player_state
+		self.animation_running = false
+	end
+end
+
+local function on_ground(self)
+	return go.get_position().y == self.last_y
+end
+
+local function is_moving_horizontal(self)
+	return self.direction.x ~= 0
+end
+
+local function animate(self)
+	sprite.set_hflip('#player_sprite', self.looking_left)
+	if self.animation_running == false then
+		sprite.play_flipbook('#player_sprite', hash(self.current_state))
+		self.animation_running = true
+	end
 end
 
 function update(self, dt)
 
 	print('player state=', self.current_state)
 
-	if self.direction.x == 0 and self.velocity.y == 0 then
-		set_player_state(self, self.player_states.idle)
+	if on_ground(self) then
+		if not is_moving_horizontal(self) then
+			set_player_state(self, self.player_states.idle)
+		else
+			set_player_state(self, self.player_states.walking)
+		end
+	else
+		if self.velocity.y > 0 then
+			set_player_state(self, self.player_states.jumping)
+		elseif self.velocity.y < 0 then
+			set_player_state(self, self.player_states.falling)
+		end
 	end
 
-	if self.velocity.y > 0 then
-		set_player_state(self, self.player_states.jumping)
-	elseif self.velocity.y < 0 then
-		set_player_state(self, self.player_states.falling)
-	end
-
-	sprite.set_hflip('#player_sprite', self.looking_left)
-	if self.animation_running == false then
-		sprite.play_flipbook('#player_sprite', hash(self.current_state))
-		self.animation_running = true
-	end
+	animate(self)
 
 	self.vertical_accel = self.vertical_accel + self.gravity_accel
 	if self.vertical_accel >= self.max_vertical_accel then
@@ -64,7 +84,10 @@ function update(self, dt)
 
 	local position = go.get_position()
 	position.x = position.x + self.direction.x * self.velocity.x * dt
+	
+	self.last_y = position.y
 	position.y = position.y + self.velocity.y * dt
+	
 	go.set_position(position)
 	self.direction = vmath.vector3()
 
@@ -102,12 +125,12 @@ function on_message(self, message_id, message, sender)
 end
 
 function on_input(self, action_id, action)
-	
+
 	if action_id == hash('move_left') then		
 		self.direction.x = -1
 		if action.pressed then
 			self.looking_left = true
-			set_player_state(self, self.player_states.walking)
+		  set_player_state(self, self.player_states.walking)
 		end
 
 	elseif action_id == hash('move_right') then
@@ -119,7 +142,8 @@ function on_input(self, action_id, action)
 
 	elseif action_id == hash('jump') then
 		if action.pressed then
-			if ( self.current_state ~= self.player_states.jumping and self.current_state ~= self.player_states.falling ) then
+			if on_ground(self) then
+			-- if ( self.current_state ~= self.player_states.jumping and self.current_state ~= self.player_states.falling ) then
 				self.velocity.y = self.jump_takeoff_speed
 			end
 		end
