@@ -1,5 +1,6 @@
 function init(self)
 	msg.post(".", "acquire_input_focus")
+	msg.post("camera", "follow")
 	self.walk_speed = 150
 	self.direction = vmath.vector3()
 	self.velocity = vmath.vector3(self.walk_speed, 0, 0)
@@ -56,9 +57,6 @@ local function animate(self)
 end
 
 function update(self, dt)
-
-	print('player state=', self.current_state)
-
 	if on_ground(self) then
 		if not is_moving_horizontal(self) then
 			set_player_state(self, self.player_states.idle)
