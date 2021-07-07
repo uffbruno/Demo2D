@@ -1,3 +1,5 @@
+local rendercam = require "rendercam.rendercam";
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.walk_speed = 150
@@ -57,7 +59,7 @@ end
 
 function update(self, dt)
 
-	print('player state=', self.current_state)
+	--('player state=', self.current_state)
 
 	if on_ground(self) then
 		if not is_moving_horizontal(self) then
