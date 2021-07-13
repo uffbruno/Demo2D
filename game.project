@@ -14,6 +14,7 @@ input_method = HiddenInputField
 
 [project]
 title = Demo2D
+dependencies#0 = https://github.com/rgrams/rendercam/archive/v1.0.1.zip
 
 [physics]
 allow_dynamic_transforms = 1

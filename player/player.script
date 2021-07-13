@@ -9,7 +9,7 @@ function init(self)
 	self.gravity_accel = 4
 	self.vertical_accel = 0
 	self.max_vertical_accel = 10
-	self.jump_takeoff_speed = 400
+	self.jump_takeoff_speed = 450
 
 	self.last_y = 0
 
