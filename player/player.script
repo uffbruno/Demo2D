@@ -43,7 +43,7 @@ local function set_player_state(self, player_state)
 end
 
 local function on_ground(self)
-	return go.get_position().y == self.last_y
+	return math.modf(go.get_position().y) == math.modf(self.last_y)
 end
 
 local function is_moving_horizontal(self)
