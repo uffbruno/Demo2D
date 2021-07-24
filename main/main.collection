@@ -44,8 +44,348 @@ instances {
   id: "collectible"
   prototype: "/collectible/collectible.go"
   position {
-    x: 804.0
-    y: 518.0
+    x: 806.0
+    y: 525.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible1"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 877.0
+    y: 456.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible2"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 735.0
+    y: 456.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible3"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 1578.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible4"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 1653.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible5"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 1726.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible6"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 1797.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible7"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 1870.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible8"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 1942.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible9"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2010.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible10"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2084.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible11"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2465.0
+    y: 630.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible12"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2541.0
+    y: 704.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible13"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2615.0
+    y: 775.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible14"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2693.0
+    y: 1299.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible15"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2771.0
+    y: 1299.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible16"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2848.0
+    y: 1299.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "collectible17"
+  prototype: "/collectible/collectible.go"
+  position {
+    x: 2977.0
+    y: 1156.0
     z: 0.0
   }
   rotation {
